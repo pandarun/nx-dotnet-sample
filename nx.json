@@ -4,7 +4,7 @@
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nx-dotnet/core"
   },
   "implicitDependencies": {
     "package.json": {
@@ -33,5 +33,21 @@
         "projects": "dependencies"
       }
     ]
-  }
+  },
+  "generators": {
+    "@nx-dotnet/core:application": {
+      "language": "C#",
+      "tags": "type:api",
+      "template": "webapi",
+      "testTemplate": "xunit"
+    },
+    "@nx-dotnet/core:library": {
+      "language": "C#",
+      "template": "classlib",
+      "testTemplate": "xunit"
+    }
+  },
+  "plugins": [
+    "@nx-dotnet/core"
+  ]
 }

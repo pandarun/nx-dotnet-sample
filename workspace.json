@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "weather-api": "apps/weather-api",
+    "weather-api-test": "apps/weather-api-test"
+  }
 }
