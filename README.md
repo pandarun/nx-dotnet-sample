@@ -1,4 +1,4 @@
-
+# Nx workspace for .Net projects using nx-dotnet
 
 # NxDotnetWorkspace
 
