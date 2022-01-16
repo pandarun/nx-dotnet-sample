@@ -8,7 +8,7 @@
     
     <ImplicitUsings>enable</ImplicitUsings>
     
-    <OutputPath>../../dist/apps/weather-api</OutputPath>
+    <OutputPath>../../dist/apps/weather-api2</OutputPath>
   </PropertyGroup>
   
   <ItemGroup>
@@ -23,7 +23,7 @@
   
   <Target Name="CheckNxModuleBoundaries" BeforeTargets="Build">
     
-    <Exec Command="node ../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p weather-api" />
+    <Exec Command="node ../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p weather-api2" />
     
   </Target>
 </Project>
