@@ -90,5 +90,6 @@
       }
     }
   },
-  "tags": ["type:app"]
+  "tags": ["type:app"],
+  "implicitDependencies": ["weather-api2"]
 }
