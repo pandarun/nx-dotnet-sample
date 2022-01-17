@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/weather-api-ui-1",
+  "sourceRoot": "apps/weather-api-ui-1/src",
+  "prefix": "nx-ui",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/weather-api-ui-1",
+        "index": "apps/weather-api-ui-1/src/index.html",
+        "main": "apps/weather-api-ui-1/src/main.ts",
+        "polyfills": "apps/weather-api-ui-1/src/polyfills.ts",
+        "tsConfig": "apps/weather-api-ui-1/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/weather-api-ui-1/src/favicon.ico",
+          "apps/weather-api-ui-1/src/assets"
+        ],
+        "styles": ["apps/weather-api-ui-1/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/weather-api-ui-1/src/environments/environment.ts",
+              "with": "apps/weather-api-ui-1/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "weather-api-ui:build:production"
+        },
+        "development": {
+          "browserTarget": "weather-api-ui:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "weather-api-ui:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/weather-api-ui-1/src/**/*.ts",
+          "apps/weather-api-ui-1/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/weather-api-ui-1"],
+      "options": {
+        "jestConfig": "apps/weather-api-ui-1/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["type:app"]
+}

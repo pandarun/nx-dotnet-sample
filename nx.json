@@ -43,17 +43,29 @@
       "testTemplate": "xunit"
     },
     "@nrwl/angular:application": {
-      "style": "css",
+      "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
+      "e2eTestRunner": "cypress",
+      "strict": true,
+      "prefix": "nx-ui",
+      "inlineStyle": true,
+      "inlineTemplate": true,
+      "skipTests": true,
+      "tags": "type:app",
+      "viewEncapsulation": "None"
     },
     "@nrwl/angular:library": {
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "strict": true
+    },
+    "@schematics/angular:component": {
+      "displayBlock": true,
+      "changeDetection": "OnPush"
     },
     "@nrwl/angular:component": {
-      "style": "css"
+      "style": "scss"
     }
   },
   "plugins": ["@nx-dotnet/core"]

@@ -3,6 +3,8 @@
   "projects": {
     "weather-api": "apps/weather-api",
     "weather-api-test": "apps/weather-api-test",
+    "weather-api-ui": "apps/weather-api-ui-1",
+    "weather-api-ui-1-e2e": "apps/weather-api-ui-1-e2e",
     "weather-api2": "apps/weather-api2",
     "weather-api2-test": "apps/weather-api2-test",
     "weather-shared": "libs/weather-shared",
