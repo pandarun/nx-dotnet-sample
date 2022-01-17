@@ -3,6 +3,14 @@
   "projectType": "application",
   "sourceRoot": "apps/weather-api",
   "targets": {
+    "docker": {
+      "executor": "@nx-tools/nx-docker:build",
+      "options": {
+        "push": false,
+        "tags": ["your-org/weather-api-1:latest", "your-org/weather-api-1:v1"],
+        "context": "apps/weather-api"
+      }
+    },
     "build": {
       "executor": "@nx-dotnet/core:build",
       "outputs": ["dist/apps/weather-api"],
