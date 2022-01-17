@@ -1,4 +1,4 @@
-name: 'nx ui frontend'
+name: 'nx frontend build'
 
 on:
   push:
