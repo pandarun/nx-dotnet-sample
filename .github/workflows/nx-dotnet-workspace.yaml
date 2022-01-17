@@ -62,3 +62,6 @@ jobs:
 
       - name: Test
         run: pnpm test
+
+      - name: Docker build
+        run: pnpm docker
