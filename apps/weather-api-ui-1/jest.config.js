@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'wearher-api-ui-2',
+  displayName: 'weather-api-ui-1',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/wearher-api-ui-2',
+  coverageDirectory: '../../coverage/apps/weather-api-ui-1',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

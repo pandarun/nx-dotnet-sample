@@ -1,12 +1,12 @@
 {
   "version": 2,
   "projects": {
-    "wearher-api-ui-1": "apps/wearher-api-ui-1",
-    "wearher-api-ui-1-e2e": "apps/wearher-api-ui-1-e2e",
-    "wearher-api-ui-2": "apps/wearher-api-ui-2",
-    "wearher-api-ui-2-e2e": "apps/wearher-api-ui-2-e2e",
     "weather-api": "apps/weather-api",
     "weather-api-test": "apps/weather-api-test",
+    "weather-api-ui-1": "apps/weather-api-ui-1",
+    "weather-api-ui-1-e2e": "apps/weather-api-ui-1-e2e",
+    "weather-api-ui-2": "apps/weather-api-ui-2",
+    "weather-api-ui-2-e2e": "apps/weather-api-ui-2-e2e",
     "weather-api2": "apps/weather-api2",
     "weather-api2-test": "apps/weather-api2-test",
     "weather-shared": "libs/weather-shared",
