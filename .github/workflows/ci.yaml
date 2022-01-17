@@ -1,0 +1,49 @@
+name: 'nx ui frontend'
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.gitignore'
+      - '**/*.gitattributes'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.gitignore'
+      - '**/*.gitattributes'
+  workflow_dispatch:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.gitignore'
+      - '**/*.gitattributes'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 17.x
+
+      - name: Install PNPM
+        run: npm install --global pnpm
+
+      - name: Install Nx dependencies
+        run: pnpm install
+
+      - name: Build Angular app weather-api-ui
+        run: pnpm exec nx build weather-api-ui
+
+      - name: Test Angular app weather-api-ui
+        run: pnpm exec nx test weather-api-ui
