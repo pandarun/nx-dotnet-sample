@@ -52,7 +52,7 @@ jobs:
         run: npm install --global pnpm
 
       - name: Install Nx dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       # - name: Restore
       #   run: dotnet restore
