@@ -55,8 +55,14 @@ jobs:
       - name: Install Nx dependencies
         run: pnpm install
 
-      - name: Build Angular app weather-api-ui
-        run: pnpm exec nx build weather-api-ui
+      - name: Build Angular app weather-api-ui-1
+        run: pnpm exec nx build weather-api-ui-1
 
-      - name: Test Angular app weather-api-ui
-        run: pnpm exec nx test weather-api-ui
+      - name: Test Angular app weather-api-ui-1
+        run: pnpm exec nx test weather-api-ui-1
+
+      - name: Build Angular app weather-api-ui-2
+        run: pnpm exec nx build weather-api-ui-2
+
+      - name: Test Angular app weather-api-ui-2
+        run: pnpm exec nx test weather-api-ui-2

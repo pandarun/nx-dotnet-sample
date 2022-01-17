@@ -1,0 +1,28 @@
+{
+  "root": "apps/wearher-api-ui-2-e2e",
+  "sourceRoot": "apps/wearher-api-ui-2-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/wearher-api-ui-2-e2e/cypress.json",
+        "devServerTarget": "wearher-api-ui-2:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "wearher-api-ui-2:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/wearher-api-ui-2-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["wearher-api-ui-2"]
+}
